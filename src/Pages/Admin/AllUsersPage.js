@@ -10,7 +10,7 @@ function AllUsersPage() {
         <Col xm="3" sm="2" style={{ height: "100vh" }} className="p-0">
           <SideBar />
         </Col>
-        <Col xs="9" sm="10">
+        <Col xs="9" sm="10" className="content">
           <UserTable />
         </Col>
       </Row>

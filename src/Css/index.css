@@ -152,3 +152,9 @@ a{
 ::-webkit-scrollbar-thumb {
   background: #29292b
 }
+
+@media (max-width: 576px) {
+   .content{
+    width: 100% !important;
+   }
+}
