@@ -26,11 +26,11 @@ function SideBar() {
       </div>
       <div className="sideItem">
         <i className="fa-solid fa-plane-departure fs-4"></i>
-        <Link to={"/"}>All orders</Link>
+        <Link to={"/allOrders"}>All orders</Link>
       </div>
       <div className="sideItem">
         <i className="fa-solid fa-user-plus fs-4"></i>
-        <Link to={"/"}>Create User</Link>
+        <Link to={"/createUser"}>Create User</Link>
       </div>
       <div className="sideItem">
         <i className="fa-solid fa-square-plus fs-4"></i>

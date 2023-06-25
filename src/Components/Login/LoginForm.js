@@ -1,8 +1,8 @@
 import React from "react";
-import { Col, Container, Row, Spinner } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Container, Spinner } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import cart from "../../Images/cart.png";
+import cart from "../../Images/cart2.png";
 
 function LoginForm() {
   const navigate = useNavigate();
@@ -10,9 +10,10 @@ function LoginForm() {
     <div className="loginPage">
       <Container className="h-100 d-flex  justify-content-center align-items-center">
         <div className=" login fit  d-flex flex-column align-items-center">
-          <img src={cart} className="loginImg" />
+          <img src={cart} className="loginImg" alt="cart" />
           <div className="divInput">
             <i className="fa-solid fa-envelope mx-2 "></i>
+
             <input
               type="email"
               placeholder="Your Email"

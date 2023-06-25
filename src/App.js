@@ -6,6 +6,8 @@ import AllUsersPage from "./Pages/Admin/AllUsersPage";
 import AllProductsPage from "./Pages/Admin/AllProductsPage";
 import AllCategoriesPage from "./Pages/Admin/AllCategoriesPage";
 import AllBrandsPage from "./Pages/Admin/AllBrandsPage";
+import AllOrdersPage from "./Pages/Admin/AllOrdersPage";
+import CreateUserPage from "./Pages/Admin/CreateUserPage";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/allProducts" element={<AllProductsPage />} />
           <Route path="/allCategories" element={<AllCategoriesPage />} />
           <Route path="/allBrands" element={<AllBrandsPage />} />
+          <Route path="/allOrders" element={<AllOrdersPage />} />
+          <Route path="/createUser" element={<CreateUserPage />} />
         </Routes>
       </BrowserRouter>
     </>
