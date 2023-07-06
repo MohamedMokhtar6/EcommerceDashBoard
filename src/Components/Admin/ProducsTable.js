@@ -1,19 +1,7 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Table } from "react-bootstrap";
-const baseURL = "https://localhost:7152/api/Products";
 
 function ProducsTable() {
-  const [products, setProducts] = useState(null);
-
-  useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setProducts(response.data);
-    });
-  }, []);
-  if (products) {
-    console.log(products);
-  }
   return (
     <div className="DataTable">
       <Table striped bordered hover className="my-5 ">
@@ -27,43 +15,31 @@ function ProducsTable() {
             <th>CreateDate</th>
             <th>UpdateDate</th>
             <th>Category Name</th>
-            <th>Brand Name</th>
+            <th>Brand Id</th>
             <th>Poster</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
         </thead>
         <tbody>
-          {products
-            ? products.map((item, index) => {
-                return (
-                  <tr key={index}>
-                    <td>{item.id}</td>
-                    <td>{item.name}</td>
-                    <td>{item.price}</td>
-                    <td>{item.rate}</td>
-                    <td>{item.quntity}</td>
-                    <td>{item.createDate}</td>
-                    <td>{item.updateDate}</td>
-                    <td>{item.category.name}</td>
-                    <td>{item.brand.name}</td>
-                    <td>
-                      <img
-                        src={"data:image/png;base64," + item.poster}
-                        style={{ height: "4rem", width: "4rem" }}
-                      />
-                    </td>
-
-                    <td className="text-center">
-                      <i className="fa-solid fa-trash text-danger click"></i>
-                    </td>
-                    <td className="text-center">
-                      <i className="fa-solid fa-pen-to-square click"></i>
-                    </td>
-                  </tr>
-                );
-              })
-            : null}
+          <tr>
+            <td>1</td>
+            <td>Poco</td>
+            <td>1000$</td>
+            <td>4.5</td>
+            <td>10</td>
+            <td>2020</td>
+            <td>2022</td>
+            <td>Mobiles</td>
+            <td>Xioami</td>
+            <td>فى صوره هنا</td>
+            <td className="text-center">
+              <i className="fa-solid fa-trash text-danger"></i>
+            </td>
+            <td className="text-center">
+              <i className="fa-solid fa-pen-to-square"></i>
+            </td>
+          </tr>
         </tbody>
       </Table>
     </div>
