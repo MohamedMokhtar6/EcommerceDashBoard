@@ -5,33 +5,40 @@ import { ToastContainer } from "react-toastify";
 function CreateUser() {
   return (
     <>
-      <Row className="m-3 flex-column ">
+      <Row className="m-3 flex-column align-items-center ">
         <div className=" fw-bold fs-4 my-3 text-center">Add New User</div>
+        <div className="d-flex justify-content-between p-0">
+          <input
+            placeholder="First Name"
+            type={"text"}
+            className="fit userInput my-2  "
+          />
+          <input
+            placeholder="Last Name"
+            type={"text"}
+            className="fit userInput my-2 "
+          />
+        </div>
         <input
           placeholder="User Name"
           type={"text"}
-          className="fit reduce my-2 main-back-color"
+          className="fit userInput my-2 w-100 "
         />
         <input
           placeholder="User Email"
           type="email"
-          className="fit reduce my-2 main-back-color"
+          className="fit userInput my-2 w-100"
         />
         <input
           placeholder="User Password"
           type="password"
-          className="fit reduce my-2 main-back-color"
+          className="fit userInput my-2 w-100"
         />
         <input
           placeholder="Phone Number"
           type="tel"
-          className="fit reduce my-2 main-back-color"
+          className="fit userInput my-2 w-100"
         />
-        <select className="my-2 reduce fit ">
-          <option value={"0"}>Select Role</option>
-          <option value={"1"}>Admin</option>
-          <option value={"2"}>User</option>
-        </select>
         <Button
           // style={{ backgroundColor: "000000" }}
           variant="dark"

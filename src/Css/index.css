@@ -99,41 +99,38 @@ a{
 /*___________________________End__Login____________________*/
 /*___________________________Start__Side Bar____________________*/
 
-.sideBar{
+.navBar{
         background: linear-gradient(282deg, #58595b 0%, #000000 47%, #58595b 100%);
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     color: var(--mainColor);
 
 }
 
-.sideItem{
+.navItem{
       display: flex;
-    gap: 16px;
-    justify-content: flex-start;
+    gap: 1px;
     align-items: center;
-    margin: 10px 0;
     width: 100%;
-    padding: 10px;
-    border-bottom: 1px solid var(--mainColor);
 }
-.sideItem:hover,.sideItem a:hover{
+.navItem:hover,.navItem a:hover{
   color: goldenrod;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
-  font-size: large;
+
 }
 
-.sideItem a{
+.navItem a{
   color: var(--mainColor);
   width: 100%;
     text-align: center;
 }
+/* .hide{
+  display: flex;
+} */
 
 /*___________________________End__Side Bar____________________*/
 /*___________________________Start__Table____________________*/
@@ -141,6 +138,17 @@ a{
   overflow-x: auto;
 }
 /*___________________________End__Table____________________*/
+/*___________________________Start__User____________________*/
+.userInput{
+  padding: 10px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+
+}
+/*___________________________End__User____________________*/
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -152,9 +160,40 @@ a{
 ::-webkit-scrollbar-thumb {
   background: #29292b
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.hideNav{
+  display: none !important;
+}
+.click{
+  cursor: pointer !important;
+}
 
 @media (max-width: 576px) {
    .content{
     width: 100% !important;
    }
+}
+@media (max-width: 851px) {
+   .hideNav{
+    display: block !important;
+   }
+    .show{
+      display: flex !important;
+      flex-direction: column;
+    } 
+    .navBar{
+      flex-direction: column;
+    }
+    .navItem{
+      display: none;
+    }
+    .hide{
+      display: flex ;
+    }
+  
+
 }

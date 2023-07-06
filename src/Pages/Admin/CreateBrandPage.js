@@ -1,19 +1,19 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
-import CreateUser from "../../Components/Admin/CreateUser";
 import Navbaradmin from "../../Components/util/Navbaradmin";
+import { Container, Row } from "react-bootstrap";
+import CreateBrand from "../../Components/Admin/CreateBrand";
 
-function CreateUserPage() {
+function CreateBrandPage() {
   return (
     <>
       <Navbaradmin />
       <Container className=" d-flex justify-content-center ">
         <Row className="mx-0 p-0 justify-content-center  ">
-          <CreateUser />
+          <CreateBrand />
         </Row>
       </Container>
     </>
   );
 }
 
-export default CreateUserPage;
+export default CreateBrandPage;

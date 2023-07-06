@@ -1,19 +1,17 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
-import SideBar from "../../Components/util/SideBar";
+import { Col, Container, Row } from "react-bootstrap";
 import ProducsTable from "../../Components/Admin/ProducsTable";
+import Navbaradmin from "../../Components/util/Navbaradmin";
 
 function AllProductsPage() {
   return (
     <>
-      <Row className="mx-0 p-0">
-        <Col xm="3" sm="2" style={{ height: "100vh" }} className="p-0">
-          <SideBar />
-        </Col>
-        <Col xs="9" sm="10" className="content">
+      <Navbaradmin />
+      <Container>
+        <Row className="mx-0 p-0">
           <ProducsTable />
-        </Col>
-      </Row>
+        </Row>
+      </Container>
     </>
   );
 }
