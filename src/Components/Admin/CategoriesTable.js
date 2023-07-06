@@ -1,7 +1,19 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
+const baseURL = "https://localhost:7152/api/Categorys";
 
 function CategoriesTable() {
+  const [categories, setCategories] = useState(null);
+
+  useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setCategories(response.data);
+    });
+  }, []);
+  if (categories) {
+    console.log(categories);
+  }
   return (
     <div className="DataTable">
       <Table striped bordered hover className="my-5 ">
@@ -16,18 +28,25 @@ function CategoriesTable() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mobiles</td>
-            <td>2022</td>
-            <td>2023</td>
-            <td className="text-center">
-              <i className="fa-solid fa-trash text-danger"></i>
-            </td>
-            <td className="text-center">
-              <i className="fa-solid fa-pen-to-square"></i>
-            </td>
-          </tr>
+          {categories
+            ? categories.map((item, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{item.id}</td>
+                    <td>{item.name}</td>
+                    <td>{item.createDate}</td>
+                    <td>{item.updateDate}</td>
+
+                    <td className="text-center">
+                      <i className="fa-solid fa-trash text-danger click"></i>
+                    </td>
+                    <td className="text-center">
+                      <i className="fa-solid fa-pen-to-square click"></i>
+                    </td>
+                  </tr>
+                );
+              })
+            : null}
         </tbody>
       </Table>
     </div>
