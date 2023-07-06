@@ -173,8 +173,10 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width: 576px) {
-   .content{
-    width: 100% !important;
+   
+   .userInput{
+    width: 50% !important;
+
    }
 }
 @media (max-width: 851px) {

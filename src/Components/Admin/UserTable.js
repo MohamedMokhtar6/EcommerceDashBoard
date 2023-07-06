@@ -11,8 +11,8 @@ function UserTable() {
             <th>LastName</th>
             <th>Username</th>
             <th>Email</th>
-            <th>Edit</th>
             <th>Delete</th>
+            <th>Edit</th>
           </tr>
         </thead>
         <tbody>
@@ -22,10 +22,10 @@ function UserTable() {
             <td>MohamedMokhtar</td>
             <td>mohamed01017715716@gmail.com</td>
             <td className="text-center">
-              <i className="fa-solid fa-trash text-danger"></i>
+              <i className="fa-solid fa-trash text-danger click"></i>
             </td>
             <td className="text-center">
-              <i className="fa-solid fa-pen-to-square"></i>
+              <i className="fa-solid fa-pen-to-square click"></i>
             </td>
           </tr>
           <tr>
